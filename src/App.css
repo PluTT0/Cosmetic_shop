@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.App  {
+  min-height: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, auto));
+  grid-template-rows: repeat(3, minmax(20px, auto));
+}
+
+a {
+  text-decoration: none;
+  font-style: none;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-style: none;
+}
