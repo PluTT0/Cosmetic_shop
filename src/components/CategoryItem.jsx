@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
     flex: 1;
     margin: 3px;
-    height: 70vh;
+    height: 60vh;
     position: relative;
 `;
 
@@ -12,6 +12,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0.7;
 `;
 
 const Info = styled.div`
@@ -34,17 +35,31 @@ const Title = styled.h1`
 
 const Button = styled.button`
     border: none;
+    border-radius: 3px;
     padding: 10px;
     background-color: #fff;
-    color: gray;
+    color: #000000;
     cursor: pointer;
     font-weight: 600;
+    &:hover{
+        background-color: #dcc2e0;
+    }
 `;
+
+const ImgContainer = styled.div`
+    display: block;
+    background-color: #0a0a0a;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+`
 
 const CategoryItem = ({item}) => {
   return (
     <Container>
-        <Image src={item.img}/>
+        <ImgContainer>
+            <Image src={item.img}/>
+        </ImgContainer>
         <Info>
             <Title>{item.title}</Title>
             <Button>SHOP HERE</Button>

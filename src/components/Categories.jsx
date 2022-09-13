@@ -7,6 +7,8 @@ const Container = styled.div`
     display: flex;
     padding: 20px;
     justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
 `;
 
 
