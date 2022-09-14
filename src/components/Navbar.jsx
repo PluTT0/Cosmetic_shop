@@ -6,16 +6,14 @@ import Search from '@mui/icons-material/Search';
 
 
 const Container = styled.div`
-    height: 60px;
 `;
 
 const Wrapper = styled.div`
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1280px;
-    margin: 0 auto
+    margin: 0 auto;
 `;
 
 const Left = styled.div`
@@ -40,7 +38,6 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
     border: none;
-    text-align: center;
 `;
 
 const Center = styled.div`
@@ -76,9 +73,9 @@ const Navbar = () => {
                     <Search style={{color: "gray", fontSize: "16px" }} />
                 </SearchContainer>
             </Left>
-            <Center><Logo>Corean Kosmetics</Logo></Center>
+            <Center><Logo>Corean Cosmetics</Logo></Center>
             <Right>
-                <MenuItem>Register</MenuItem>
+                <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>
                 <MenuItem>
                 <Badge badgeContent={4} color="primary">
@@ -89,6 +86,6 @@ const Navbar = () => {
         </Wrapper>
     </Container>
   )
-}
+};
 
-export default Navbar
+export default Navbar;

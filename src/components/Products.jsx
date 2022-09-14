@@ -26,7 +26,7 @@ const Title = styled.h2`
 const Products = () => {
   return (
     <>
-      <Title>Popular products</Title>
+      {/* <Title>Popular products</Title> */}
       <Container>
           {popularProducts.map((item) => {
               return(
