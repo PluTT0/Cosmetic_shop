@@ -4,6 +4,7 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 `;
@@ -16,17 +17,20 @@ const SectionWrapper = styled.div`
 const Wrapper = styled.div`
   padding: 20px 0;
   display: flex;
+  ${mobile({ flexDirection: 'column'})}
 `;
 
 const ImgContainet = styled.div`
   flex: 1;
   display: flex;
   align-items: flex-end;
+  ${mobile({ justifyContent: 'center', })}
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
+  ${mobile({ height: '80%', width: '85%'})}
 `;
 
 const InfoContent = styled.div`

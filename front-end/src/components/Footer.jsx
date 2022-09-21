@@ -6,12 +6,14 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   margin: 20px auto;
   display: flex;
   background-color: #fff;
   max-width: 1280px;
+  ${mobile({flexDirection: 'column', marginTop: '10px'})};
 `;
 
 const Left = styled.div`
@@ -20,6 +22,8 @@ const Left = styled.div`
   align-items: center;
   margin-left: 20px;
   flex: 1;
+  ${mobile({alignItems: 'flex-start'})};
+
 `;
 
 const Center = styled.div`
@@ -28,6 +32,7 @@ const Center = styled.div`
   align-items: center;
   margin-left: 20px;
   flex: 1;
+  ${mobile({display: 'none'})};
 `;
 
 const Right = styled.div`
@@ -36,6 +41,7 @@ const Right = styled.div`
   flex-direction: column;
   margin-left: 20px;
   flex: 1;
+  ${mobile({backgroundColor: '#ecc3f584', padding: '10px 5px 5px 15px', margin: '10px 0 0 0',alignItems: 'flex-start'})};
 `;
 
 const Logo = styled.h1`
@@ -50,6 +56,7 @@ const SocialIconsWrapper = styled.div`
   justify-content: flex-start;
   font-size: 35px;
   margin-left: 15px;
+  ${mobile({margin: '0 0 10px 0'})}
 `;
 
 const SocialIcon = styled.div`
