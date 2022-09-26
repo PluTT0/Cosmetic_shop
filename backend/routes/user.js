@@ -9,7 +9,7 @@ router.put("/:id", verifyTokenAndAuth, async (req, res) => {
       req.body.password, 
       process.env.PASS_SEC 
     ).toString();
-  }
+  };
 
   try {
     const updatedUser = await User.findByIdAndUpdate(
@@ -18,10 +18,10 @@ router.put("/:id", verifyTokenAndAuth, async (req, res) => {
       },
       { new: true }
     );
-    res.status(200).json(updatedUser)
+    res.status(200).json(updatedUser);
   }catch (err) {
     res.status(500).json(err);
-  }
+  };
 });
 
 //DELETE
@@ -32,7 +32,7 @@ router.delete("/:id", verifyTokenAndAuth, async (req, res) => {
     res.status(200).json("User has been delated...");
   }catch(err) {
     res.status(500).json(err);
-  }
+  };
 });
 
 //GET USER
@@ -40,23 +40,23 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
   try{
     const user = await User.findById(req.params.id);
     const { password, ...others } = user._doc;
-    res.status(200).json(others)
+    res.status(200).json(others);
   }catch(err) {
     res.status(500).json(err);
-  }
-})
+  };
+});
 
 //GET ALL USER
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
   const query = req.query.new;
 
   try{
-    const users = query ? await User.find().sort({ _id: -1}).limit(1) : await User.find();
-    res.status(200).json(users)
+    const users = query ? await User.find().sort({ _id: -1}).limit(5) : await User.find();
+    res.status(200).json(users);
   }catch(err) {
     res.status(500).json(err);
-  }
-})
+  };
+});
 
 //GET USER STATUS
 router.get("/status", verifyTokenAndAdmin, async (req, res) => {
@@ -81,8 +81,8 @@ router.get("/status", verifyTokenAndAdmin, async (req, res) => {
     res.status(200).json(data);
   }catch(err) { 
     res.status(500).json(err);
-  }
-})
+  };
+});
 
 
 module.exports = router;
