@@ -148,11 +148,9 @@ const SummaryItem = styled.div`
 `;
 
 const SummaryItemText = styled.p`
-  
 `;
 
 const SummaryItemPrice = styled.p`
-  
 `;
 
 const Button = styled.button`
@@ -162,6 +160,7 @@ const Button = styled.button`
   color: #fff;
   font-weight: 600px;
 `;
+
 const Cart = () => {
   return (
     <>
