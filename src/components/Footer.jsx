@@ -8,22 +8,32 @@ import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 const Container = styled.div`
-  margin-top: 20px;
+  margin: 20px auto;
   display: flex;
   background-color: #fff;
+  max-width: 1280px;
 `;
 
 const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 20px;
   flex: 1;
 `;
 
 const Center = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 20px;
   flex: 1;
 `;
 
 const Right = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-left: 20px;
   flex: 1;
 `;
@@ -39,6 +49,7 @@ const SocialIconsWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: 35px;
+  margin-left: 15px;
 `;
 
 const SocialIcon = styled.div`
@@ -61,6 +72,7 @@ const Title = styled.h3`
 const LinksWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  max-width: 300px;
 `;
 
 const ActiveLink = styled.li`

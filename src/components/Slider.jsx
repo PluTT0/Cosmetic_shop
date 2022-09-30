@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { sliderItems } from '../data';
 
 const Container = styled.div`
-    width: 100%;
+    margin: 0 auto;
     height: 100vh;
     display: flex;
     position: relative;
