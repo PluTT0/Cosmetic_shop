@@ -1,10 +1,11 @@
 import React from 'react';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     height: 60vh;
-    background-color: #e4bbbb;
+    background-color: #e4bbbb8f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +23,7 @@ const Description = styled.div`
     font-size:20px;
     font-weight: 300;
     letter-spacing: 3px;
+    ${mobile({textAlign: 'center'})};
 `;
 
 const InputContainer = styled.div`
@@ -31,6 +33,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     border: 0.5px solid lightgray;
+    ${mobile({width: '80%'})};
 `;
 
 const Input = styled.input`

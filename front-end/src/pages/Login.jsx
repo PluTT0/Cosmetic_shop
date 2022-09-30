@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react';import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://res.cloudinary.com/dlw1urjvs/image/upload/v1663124706/cosmetic%20shop/pexels-monstera-6621224_jiyvua.jpg") center no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://res.cloudinary.com/dlw1urjvs/image/upload/v1663130179/cosmetic%20shop/pexels-shvets-production-9774906_yzls9n.jpg") center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -12,8 +12,9 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   padding:20px;
-  width: 30%;
+  width: 25%;
   background-color: #fff;
+  ${mobile({ width: '75%'})}
 `;
 const Title = styled.h1`
   text-align: center;
@@ -22,21 +23,17 @@ const Title = styled.h1`
 `;
 const Form = styled.form`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   flex-direction: column;
+  margin: 10px;
 `;
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 10px;
 `;
-const Agreement = styled.p`
-  font-size: 12px;
-  margin: 20px 0;
-`;
 const Button = styled.button`
+  margin-top: 10px;
   width: 40%;
   border: none;
   padding: 15px 20px;
@@ -44,22 +41,26 @@ const Button = styled.button`
   color: white;
   cursor: pointer;
 `;
-const Register = () => {
+
+const Link = styled.a`
+  margin: 5px 0;
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
+const Login = () => {
   return (
     <>
-
       <Container>
         <Wrapper>
-          <Title>Create your account</Title>
+          <Title>SIGN IN</Title>
           <Form>
-            <Input placeholder='name'/>
             <Input placeholder='email'/>
             <Input placeholder='password'/>
-            <Input placeholder='confirm password'/>
-            <Agreement>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate impedit sit sint? <b>PRIVACY POLICY</b>
-            </Agreement>
-            <Button>Register</Button>
+            <Button>LOGIN</Button>
+            <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
+            <Link>CREATE NEW ACCOUNT</Link>
           </Form>
         </Wrapper>
 
@@ -68,4 +69,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Login

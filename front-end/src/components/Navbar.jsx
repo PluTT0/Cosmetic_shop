@@ -3,9 +3,13 @@ import styled from '@emotion/styled';
 import { Badge } from '@mui/material';
 import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 import Search from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
+
+import { mobile } from '../responsive'
 
 
 const Container = styled.div`
+    ${mobile({height: ''})};
 `;
 
 const Wrapper = styled.div`
@@ -20,12 +24,14 @@ const Left = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
+    ${mobile({display: 'none'})};
 `;
 
 const Lanquage = styled.span`
     font-size: 14px;
     cursor: pointer;
     display: flex;
+    ${mobile({display: 'none'})};
 `;
 
 const SearchContainer = styled.div`
@@ -34,10 +40,12 @@ const SearchContainer = styled.div`
     align-content: center;
     margin-left: 25px;
     padding: 5px;
+    ${mobile({margin: '0px 15px 0 15px'})};
 `;
 
 const Input = styled.input`
     border: none;
+    ${mobile({fontSize:'12px'})};
 `;
 
 const Center = styled.div`
@@ -47,6 +55,7 @@ const Center = styled.div`
 const Logo = styled.h1`
     font-weight: bold;
     text-align: center;
+    ${mobile({fontSize:'24px', marginLeft: '35px'})};
 `;
 
 const Right = styled.div`
@@ -54,12 +63,14 @@ const Right = styled.div`
     display: flex;
     align-content: center;
     justify-content: flex-end;
+    ${mobile({flex: '2', justifyContent: 'center'})};
 `;
 
 const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
+    ${mobile({fontSize: '12px', marginLeft: '10px;'})};
 `;
 
 const Navbar = () => {
@@ -69,18 +80,20 @@ const Navbar = () => {
             <Left>
                 <Lanquage>EN</Lanquage>
                 <SearchContainer>
-                    <Input />
+                    <Input placeholder='Search' />
                     <Search style={{color: "gray", fontSize: "16px" }} />
                 </SearchContainer>
             </Left>
-            <Center><Logo>Corean Cosmetics</Logo></Center>
+            <Center><Link to={'/'}><Logo>Corean Cosmetics</Logo></Link></Center>
             <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem><Link to={'/register'}>REGISTER</Link></MenuItem>
+                <MenuItem><Link to={'/login'}>SIGN IN</Link></MenuItem>
                 <MenuItem>
-                <Badge badgeContent={4} color="primary">
-                    <ShoppingCartOutlined color="black" />
-                </Badge>
+                    <Link to={'/cart'}>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlined color="black" />
+                        </Badge>
+                    </Link>
                 </MenuItem>
             </Right>
         </Wrapper>
