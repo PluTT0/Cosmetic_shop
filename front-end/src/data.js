@@ -26,16 +26,19 @@ export const categories = [{
     id: 1,
     img: "https://res.cloudinary.com/dlw1urjvs/image/upload/v1655116351/cosmetic%20shop/photo_2022-05-26_23-38-52_iwg3m7.jpg",
     title: "SPA COSMETICS",
+    cat:"spa"
   },
   {
     id: 2,
     img: "https://res.cloudinary.com/dlw1urjvs/image/upload/v1655116351/cosmetic%20shop/photo_2022-05-26_23-39-01_fglky3.jpg",
     title: "MILK FOR BODY",
+    cat:"mfb"
   },
   {
     id: 3,
     img: "https://res.cloudinary.com/dlw1urjvs/image/upload/v1655116352/cosmetic%20shop/photo_2022-06-12_13-01-35_vrtlg0.jpg",
     title: "AROMA SOAP",
+    cat:"aromaSoap"
   },
 ];
 

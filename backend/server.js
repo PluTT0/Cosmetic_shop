@@ -11,7 +11,7 @@ const paymentRouter= require("./routes/stripe");
 const app = express();
 
 dotenv.config()
-
+const serverPort = process.env.PORT || 5000;
 mongoose.
   connect(process.env.MONGO_URL)
   .then(() => console.log("DBConection Succesfull!!"))
@@ -29,6 +29,6 @@ mongoose.
   app.use("/api/orders", orderRouter);
   app.use("/api/checkout/", paymentRouter);
 
-app.listen(process.env.PORT || 5000,()=> {
-  console.log('Backend server is running...');
+app.listen(serverPort,()=> {
+  console.log(`Backend server is running on server ${serverPort}...`);
 });

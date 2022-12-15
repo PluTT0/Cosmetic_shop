@@ -9,7 +9,7 @@ const Container = styled.div`
     position: relative;
     overflow: hidden;
     ${mobile({display: 'none',})};
-    max-width: 1400px;
+    /* max-width: 1400px; */
 `;
 
 const Arrow = styled.div`

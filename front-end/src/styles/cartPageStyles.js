@@ -8,7 +8,7 @@ const Container =styled.div`
   margin: 0 auto;
 `;
 const Wrapper =styled.div`
-  margin: 20px;
+  margin: 40px 0;
   ${mobile({ padding: '10px'})}
 `;
 const Title = styled.h1`
@@ -47,6 +47,7 @@ const TopButtom = styled.button`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 40px 20px;
   ${mobile({ flexDirection: 'column'})}
 `;
 

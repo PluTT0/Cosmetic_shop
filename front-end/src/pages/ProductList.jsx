@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
@@ -39,6 +40,21 @@ const Option = styled.option`
 `;
 
 const ProductList = () =>  {
+  const location = useLocation();
+  const cat = location.pathname.split("/")[2];
+  const [filter, setFilter] = useState('');
+  const [sort, setSort] = useState('');
+
+  const chageFilter = (e) => {
+    const value = e.target.value;
+    setFilter({
+      ...filter,
+      [e.target.name]: value,
+    })
+  }
+
+  console.log(filter)
+
   return(
     <>
       <Container>
@@ -48,7 +64,7 @@ const ProductList = () =>  {
         <FilterContainer>
           <Filter>
             <FilterText>Filter products:</FilterText>
-            <Select defaultValue={"All_types"}>
+            <Select defaultValue={"All_types"} name="type" onChange={chageFilter}>
               <Option disabled value="Type">Type</Option>
               <Option value="All_types">All types</Option>
               <Option value="Cream">Cream</Option>
@@ -59,14 +75,14 @@ const ProductList = () =>  {
           </Filter>
           <Filter>
             <FilterText>Sort products:</FilterText>
-            <Select defaultValue={"Newest"}>
-              <Option value="Newest">Newest</Option>
-              <Option>Price (asc)</Option>
-              <Option>Price (desc)</Option>
+            <Select defaultValue={"Newest"} name="sort" onChange={(e) => {setSort(e.target.value)}}>
+              <Option value="newest">Newest</Option>
+              <Option value="asc" >Price (asc)</Option>
+              <Option value="desc" >Price (desc)</Option>
             </Select>
           </Filter>
         </FilterContainer>
-        <Products/>
+        <Products cat={cat} filters={filter} sort={sort} />
         <Newsletter/>
         <Footer/>
       </Container>

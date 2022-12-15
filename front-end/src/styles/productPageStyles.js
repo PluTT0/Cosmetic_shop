@@ -1,0 +1,136 @@
+import styled from "styled-components";
+import { mobile } from "./responsive";
+
+const Container = styled.div`
+`;
+
+const SectionWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1280px;
+`;
+
+const Wrapper = styled.div`
+  padding: 20px 0;
+  display: flex;
+  ${mobile({ flexDirection: 'column'})}
+`;
+
+const ImgContainet = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  ${mobile({ justifyContent: 'center', })}
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  ${mobile({ height: '80%', width: '85%'})}
+`;
+
+const InfoContent = styled.div`
+  flex: 1;
+  padding: 0 50px;
+`;
+
+const Title = styled.h1`
+  font-weight: 200;
+`;
+
+const Descr = styled.p`
+  margin: 20px 0;
+`;
+
+const Price = styled.span`
+  font-weight: 100;
+  font-size: 40px;
+`;
+
+const FilterContainer = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Filter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 15px 0;
+`;
+
+const FilterTitle = styled.p`
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 60;
+`;
+
+const FilterVolume = styled.select``;
+
+const FilterVolumeOption = styled.option``;
+
+const ButtonContainer =styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+`;
+const AmountContainer =styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+`;
+
+const Remove =styled.div`
+  font-size: 20px;
+`;
+
+const Amount =styled.p`
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid teal;
+  margin: 0 5px;
+  font-size: 20px;
+`;
+
+const Add = styled.div`
+  font-size: 20px;
+`;
+
+const Button =styled.button`
+  padding: 15px;
+  border: 2px solid teal;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: teal;
+  }
+`;
+
+
+export {
+    Container,
+    SectionWrapper,
+    Wrapper,
+    ImgContainet,
+    Image,
+    InfoContent,
+    Title,
+    Descr,
+    Price,
+    Filter,
+    FilterContainer,
+    FilterTitle,
+    FilterVolume,
+    FilterVolumeOption,
+    Add,
+    Amount,
+    AmountContainer,
+    Remove,
+    Button,
+    ButtonContainer,
+};
