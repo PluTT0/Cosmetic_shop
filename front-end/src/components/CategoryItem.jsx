@@ -58,6 +58,7 @@ const ImgContainer = styled.div`
 `
 
 const CategoryItem = ({item}) => {
+    console.log(item)
   return (
     <>
         <Container> 

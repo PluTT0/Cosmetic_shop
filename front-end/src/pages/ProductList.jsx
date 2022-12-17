@@ -40,11 +40,11 @@ const Option = styled.option`
 `;
 
 const ProductList = () =>  {
+  
   const location = useLocation();
   const cat = location.pathname.split("/")[2];
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState({});
   const [sort, setSort] = useState('');
-
   const chageFilter = (e) => {
     const value = e.target.value;
     setFilter({
@@ -53,7 +53,7 @@ const ProductList = () =>  {
     })
   }
 
-  console.log(filter)
+  console.log(cat, filter)
 
   return(
     <>
@@ -64,13 +64,22 @@ const ProductList = () =>  {
         <FilterContainer>
           <Filter>
             <FilterText>Filter products:</FilterText>
-            <Select defaultValue={"All_types"} name="type" onChange={chageFilter}>
-              <Option disabled value="Type">Type</Option>
-              <Option value="All_types">All types</Option>
-              <Option value="Cream">Cream</Option>
-              <Option value="Soap">Soap</Option>
-              <Option value="Aroma_oil">Aroma oil</Option>
-              <Option value="Shampoo">Shampoo</Option>
+            <Select defaultValue={"all_categories"} name="category" onChange={chageFilter}>
+              <Option disabled value="category">Categories</Option>
+              <Option value="all_types">All categories</Option>
+              <Option value="cream">Cream</Option>
+              <Option value="soap">Soap</Option>
+              <Option value="oil">Aroma oil</Option>
+              <Option value="shampoo">Shampoo</Option>
+            </Select>
+          </Filter>
+          <Filter>
+            <FilterText>Product value</FilterText>
+            <Select defaultValue={""} name="value" onChange={chageFilter}>
+              <Option value="50">50 ml</Option>
+              <Option value="100">100 ml</Option>
+              <Option value="150">150 ml</Option>
+              <Option value="200">200 ml</Option>
             </Select>
           </Filter>
           <Filter>
