@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { mobile } from './responsive';
 
 const Container = styled.div`
-  margin: 20px auto;
+  padding: 20px 0;
   display: flex;
-  background-color: #fff;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   ${mobile({flexDirection: 'column', marginTop: '10px'})};
+  background-color: teal;
 `;
 
 const Left = styled.div`
@@ -37,7 +37,7 @@ const Right = styled.div`
   ${mobile({backgroundColor: '#ecc3f584', padding: '10px 5px 5px 15px', margin: '10px 0 0 0',alignItems: 'flex-start'})};
 `;
 
-const Logo = styled.h1`
+const FooterLogo = styled.h2`
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 10px;
@@ -62,6 +62,10 @@ const SocialIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover{
+    box-shadow: 0 0.2em 0.2em -0.3em;
+    transform: translateY(-0.03em);
+  }
 `;
 
 const Title = styled.h3`
@@ -78,6 +82,13 @@ const LinksWrapper = styled.ul`
 const ActiveLink = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  cursor: pointer;
+  p {
+    display: inline-block;
+    transition: .5s ease;
+  } p:hover {
+    box-shadow: 0 2px 0 0 currentcolor;
+  }
 `;
 
 const ContactItem = styled.div`
@@ -92,7 +103,7 @@ export {
     Container,
     Left,
     Title,
-    Logo,
+    FooterLogo,
     SocialIcon,
     SocialIconsWrapper,
     Center,

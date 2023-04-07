@@ -64,7 +64,12 @@ const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
+    display: inline-block;
+    transition: .5s ease;
     ${mobile({fontSize: '12px', marginLeft: '10px;'})};
+    &:hover {
+    box-shadow: 0 2px 0 0 currentcolor;
+  }
 `;
 
 export {

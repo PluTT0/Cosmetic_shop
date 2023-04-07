@@ -12,7 +12,7 @@ const {
   Container,
   Left,
   Title,
-  Logo,
+  FooterLogo,
   SocialIcon,
   SocialIconsWrapper,
   Center,
@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Cosmetic Shop.</Logo>
+        <FooterLogo>Cosmetic Shop.</FooterLogo>
         <Title>Our social media`s:</Title>
         <SocialIconsWrapper>
           <SocialIcon color='#3227ff'>
@@ -43,11 +43,11 @@ const Footer = () => {
       <Center>
         <Title>Active Links</Title>
         <LinksWrapper>
-          <ActiveLink>Home</ActiveLink>
-          <ActiveLink>Cart</ActiveLink>
-          <ActiveLink>My Account</ActiveLink>
-          <ActiveLink>Order Tracking</ActiveLink>
-          <ActiveLink>Wish List</ActiveLink>
+          <ActiveLink><p>Home</p></ActiveLink>
+          <ActiveLink><p>Cart</p></ActiveLink>
+          <ActiveLink><p>My Account</p></ActiveLink>
+          <ActiveLink><p>Order Tracking</p></ActiveLink>
+          <ActiveLink><p>Wish List</p></ActiveLink>
         </LinksWrapper>
       </Center>
       <Right>

@@ -63,7 +63,7 @@ const ProductList = () =>  {
         <Title>Soap</Title>
         <FilterContainer>
           <Filter>
-            <FilterText>Filter products:</FilterText>
+            {/* <FilterText>Filter products:</FilterText>
             <Select defaultValue={"all_categories"} name="category" onChange={chageFilter}>
               <Option disabled value="category">Categories</Option>
               <Option value="all_types">All categories</Option>
@@ -71,7 +71,7 @@ const ProductList = () =>  {
               <Option value="soap">Soap</Option>
               <Option value="oil">Aroma oil</Option>
               <Option value="shampoo">Shampoo</Option>
-            </Select>
+            </Select> */}
           </Filter>
           <Filter>
             <FilterText>Product value</FilterText>
